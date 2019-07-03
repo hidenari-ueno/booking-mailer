@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root "mail_addresses#index"
+  root "mails#index"
 end

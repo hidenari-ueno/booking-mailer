@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190702235225) do
+ActiveRecord::Schema.define(version: 20190703085459) do
 
   create_table "mail_addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false, comment: "名前"
@@ -19,4 +19,19 @@ ActiveRecord::Schema.define(version: 20190702235225) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title", null: false, comment: "件名"
+    t.text "body", null: false, comment: "本文"
+    t.text "sammary", null: false, comment: "概要"
+    t.datetime "post_date", null: false, comment: "送信日"
+    t.bigint "sender_id", null: false, comment: "送信元アドレスID"
+    t.bigint "receiver_id", null: false, comment: "送信先アドレスID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_mails_on_receiver_id"
+    t.index ["sender_id"], name: "index_mails_on_sender_id"
+  end
+
+  add_foreign_key "mails", "mail_addresses", column: "receiver_id"
+  add_foreign_key "mails", "mail_addresses", column: "sender_id"
 end
