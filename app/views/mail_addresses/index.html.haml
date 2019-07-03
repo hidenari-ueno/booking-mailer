@@ -1,0 +1,32 @@
+.main.container.w-100
+  .top.row.border-bottom.border-secondary
+    .btns.col.mb-2.mt-5
+      .btn.btn-outline-primary.btn-lg 予約リスト
+      .btn.btn-outline-success.btn-lg 新規予約
+    %a.time.text-muted.d-flex.justify-content-end.align-items-end.mb-1.mr-3 2019-7-3 wed 12:50
+  .middle.container.border.border-radius.border-secondary.mt-2.shadow.rounded
+    .row.m-1
+      .col-lg-8.col-sm-12
+        .row.mb-1
+          .col-lg-8.text-muted 件名：
+        .row
+          .col-lg-3.text-muted 日時：
+          .col-lg-5.text-muted FROM：
+      .col-lg-3.col-sm-3.d-flex.align-items-center.pr-0.offset-1
+        .btn.btn.btn-outline-primary.btn-sm.ml-auto 概要
+        .btn.btn.btn-outline-success.btn-sm.ml-2 更新
+        .btn.btn-outline-secondary.btn-sm.ml-2 停止
+        .btn.btn-outline-danger.btn-sm.ml-2 削除
+  .middle.container.border.border-radius.border-secondary.mt-2.shadow.rounded
+    .row.m-1
+      .col-lg-8.col-sm-12
+        .row.mb-1
+          .col-lg-8.text-muted 件名：
+        .row
+          .col-lg-3.text-muted 日時：
+          .col-lg-5.text-muted FROM：
+      .col-lg-3.col-sm-3.d-flex.align-items-center.pr-0.offset-1
+        .btn.btn.btn-outline-primary.btn-sm.ml-auto{data: { toggle: 'popover',place: 'left',content: 'ここに変数を展開する。長い文だとどうなるのか分からないのでいま試す。さてどうなることやら。。。'},title: '概要' } 概要
+        .btn.btn.btn-outline-success.btn-sm.ml-2 更新
+        .btn.btn-outline-secondary.btn-sm.ml-2 停止
+        .btn.btn-outline-danger.btn-sm.ml-2 削除
