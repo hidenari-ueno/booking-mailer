@@ -1,8 +1,10 @@
 .main.container.w-100
   .top.row.border-bottom.border-secondary
     .btns.col.mb-2.mt-5
-      .btn.btn-outline-primary.btn-lg 予約リスト
-      .btn.btn-outline-success.btn-lg 新規予約
+      .btn.btn-outline-primary.btn-lg.active 予約リスト
+      .new_mail_btn
+        = link_to  new_mail_path, class:"btn btn-outline-success btn-lg" do
+          新規予約
     %a.time.text-muted.d-flex.justify-content-end.align-items-end.mb-1.mr-3 2019-7-3 wed 12:50
   .middle.container.border.border-radius.border-secondary.mt-2.shadow.rounded
     .row.m-1
