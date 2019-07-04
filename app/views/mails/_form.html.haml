@@ -1,0 +1,41 @@
+.main.container.w-100
+  .mail_info_header.row.border-bottom.border-secondary
+    %h2.display-5.text-muted.mt-3 メール情報
+  .mail_forms.container.w-75
+    .row.mt-4
+      %label.col-sm-1.text-muted.d-flex.justify-content-end.align-items-end From
+      %input.form-control.col-sm-9{type:'email'}
+    .row.mt-3
+      %label.col-sm-1.text-muted.d-flex.justify-content-center.align-items-center To
+      %input.form-control.col-sm-9{type:'email'}
+    .row.mt-3
+      %label.col-sm-1.text-muted.d-flex.justify-content-center.align-items-center 件名
+      %input.form-control.col-sm-9{type:'text'}
+    .row.mt-3
+      %label.col-sm-1.text-muted.d-flex.justify-content-end.align-items-strech 本文
+      %textarea.form_body.form-control.col-sm-9{rows:20}
+    .row.mt-3
+      %label.col-sm-1.text-muted.d-flex.justify-content-end.align-items-strech 概要
+      %textarea.form-control.col-sm-9
+    .row.mt-3
+      %label.col-sm-1.text-muted.d-flex.justify-content-end.align-items-end いつ
+      .col-sm-9.justify-content-between
+        .form-check.form-check-inline
+          %input.form-check-input{type:'checkbox'}
+          %label.form-check-label 月初
+        .form-check.form-check-inline
+          %input.form-check-input{type:'checkbox'}
+          %label.form-check-label 月末
+        .form-check.form-check-inline
+          %input.form-check-input{type:'checkbox'}
+          %label.form-check-label 週初
+        .form-check.form-check-inline
+          %input.form-check-input{type:'checkbox'}
+          %label.form-check-label 週末
+    .row.aline-content-center.mt-3.mb-5
+      .col-sm-1
+      .back_to_index_btn.col-sm-4
+        = link_to :back,class:"btn btn-outline-secondary btn-lg" do
+          戻る
+      .col-sm-1
+      .btn.btn-outline-success.btn-lg.col-sm-4 OK
